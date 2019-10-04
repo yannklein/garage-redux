@@ -20,6 +20,7 @@
     "webpack-dev-server": "^2.8.1"
   },
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "history": "^4.7.2",
     "react": "16.0.0",
     "react-dom": "16.0.0",
@@ -30,8 +31,9 @@
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.5.3"
   },
+  "homepage": "https://yannklein.github.io/garage-redux",
   "scripts": {
     "start": "webpack-dev-server",
-    "deploy": "echo \"You are using react-router. You can't deploy on GitHub Pages\""
+    "deploy": "webpack -p && gh-pages -d dist"
   }
 }
