@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { createHistory as history } from 'history';
+import { BrowserRouter as Route, Switch, HashRouter } from 'react-router-dom';
+// import { createHistory as history } from 'history';
 
 import CarsIndex from '../containers/cars_index';
 import CarsNew from '../containers/cars_new';
@@ -10,7 +10,7 @@ import LeftMenu from '../components/left_menu';
 export default class App extends React.Component {
   render() {
     return (
-      <Router history={history}>
+      <HashRouter basename='/'>
         <div className="app">
           <LeftMenu />
           <Switch>
@@ -19,7 +19,7 @@ export default class App extends React.Component {
             <Route path="/car/:id" component={CarsShow} />
           </Switch>
         </div>
-      </Router>
+      </HashRouter>
     );
   }
 }

@@ -12,15 +12,17 @@ class CarsIndex extends React.Component {
   }
 
   render() {
-    return this.props.cars.map((car) => {
-      return (
-        <div className="car-index">
-          <Link className="btn btn-cta" to={`/car/${car.id}`} key={car.id}>
-            <Car key={car.id} car={car} />
-          </Link>
-        </div>
-      );
-    });
+    return (
+      <div className="car-index">
+        {this.props.cars.map((car) => {
+          return (
+            <Link className="btn btn-cta" to={`/car/${car.id}`} key={car.id}>
+              <Car key={car.id} car={car} />
+            </Link>
+          );
+        })}
+      </div>
+    );
   }
 }
 
