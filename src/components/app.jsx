@@ -14,9 +14,9 @@ export default class App extends React.Component {
         <div className="app">
           <LeftMenu />
           <Switch>
-            <Route path="/" exact component={CarsIndex} />
-            <Route path="/car/new" exact component={CarsNew} />
-            <Route path="/car/:id" component={CarsShow} />
+            <Route path={process.env.PUBLIC_URL + "/"} exact component={CarsIndex} />
+            <Route path={process.env.PUBLIC_URL + "/car/new"} exact component={CarsNew} />
+            <Route path={process.env.PUBLIC_URL + "/car/:id"} component={CarsShow} />
           </Switch>
         </div>
       </Router>
