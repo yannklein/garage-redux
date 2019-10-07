@@ -31,7 +31,7 @@
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.5.3"
   },
-  "homepage": "https://yannklein.github.io/garage-redux",
+  "homepage": "https://yannklein.me/garage-redux/",
   "scripts": {
     "start": "webpack-dev-server",
     "deploy": "webpack -p && gh-pages -d dist"
