@@ -8,15 +8,18 @@ import CarsShow from '../containers/cars_show';
 import LeftMenu from '../components/left_menu';
 
 export default class App extends React.Component {
+
+
   render() {
+    const baseURL = process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "";
     return (
-      <Router history={history}>
+      <Router basename={baseURL + "/"} history={history}>
         <div className="app">
           <LeftMenu />
           <Switch>
-            <Route path={process.env.PUBLIC_URL + "/"} exact component={CarsIndex} />
-            <Route path={process.env.PUBLIC_URL + "/car/new"} exact component={CarsNew} />
-            <Route path={process.env.PUBLIC_URL + "/car/:id"} component={CarsShow} />
+            <Route path={baseURL + "/"} exact component={CarsIndex} />
+            <Route path={baseURL + "/car/new"} exact component={CarsNew} />
+            <Route path={baseURL + "/car/:id"} component={CarsShow} />
           </Switch>
         </div>
       </Router>
