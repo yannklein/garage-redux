@@ -11,15 +11,14 @@ export default class App extends React.Component {
 
 
   render() {
-    const baseURL = process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "";
     return (
-      <Router basename={baseURL + "/"} history={history}>
+      <Router basename={process.env.PUBLIC_URL} history={history}>
         <div className="app">
           <LeftMenu />
           <Switch>
-            <Route path={baseURL + "/"} exact component={CarsIndex} />
-            <Route path={baseURL + "/car/new"} exact component={CarsNew} />
-            <Route path={baseURL + "/car/:id"} component={CarsShow} />
+            <Route path={"/"} exact component={CarsIndex} />
+            <Route path={"/car/new"} exact component={CarsNew} />
+            <Route path={"/car/:id"} component={CarsShow} />
           </Switch>
         </div>
       </Router>

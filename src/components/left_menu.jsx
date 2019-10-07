@@ -8,7 +8,7 @@ export default class LeftMenu extends React.Component {
       <div className="left-menu">
         <div className="garage-image" style={{ imgStyle }}>
           <div className="garage-logo">
-            <Link className="btn btn-cta" to="/">
+            <Link className="btn btn-cta" to="">
               <img src="https://i.pinimg.com/originals/c5/40/57/c540575dde6d1ae57cb3cfa836812de8.jpg" alt="" />
             </Link>
           </div>
